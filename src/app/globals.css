@@ -1,0 +1,373 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+  .navSection:hover svg {
+    color: var(--foreground);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.nav-item-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+  will-change: transform, opacity;
+}
+.nav-item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+  will-change: transform, opacity;
+}
+.nav-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+  will-change: transform, opacity;
+}
+.nav-item-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 300ms, transform 300ms;
+  will-change: transform, opacity;
+}
+
+.nav-hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+.nav-hover-effect::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 300ms ease;
+}
+.nav-hover-effect:hover::after {
+  width: 100%;
+}
+
+.skillTitle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.skillTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+.skillCard:hover .skillTitle {
+    transform: translateY(-2px);
+    color: #3b82f6;
+}
+.skillCard:hover .skillTitle::after {
+    width: 100%;
+    background-color: #60a5fa;
+}
+
+.articleCard {
+  transition: width 0.3s ease-in-out, height 0.4s ease-in, transform 0.3s ease;
+}
+.articleCard img {
+  display: none;
+  opacity: 0;
+  width: 300px;
+  height: 350px;
+  transition: opacity 0.5s ease;
+}
+
+.articleCard:hover {
+  width: 300px;
+  height: 350px;
+  cursor: pointer;
+}
+.articleCard:hover svg {
+  display: none;
+}
+.articleCard:hover img {
+  display: block;
+  opacity: 1;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+  height: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #2b6cb0;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: width 1s ease-in-out;
+  animation: fillAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes portfolioFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.portfolio-fade-in {
+    opacity: 0;
+    animation: portfolioFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+.animate-slideIn {
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes socialBlockFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.social-block-fade-in {
+    opacity: 0;
+    animation: socialBlockFadeIn 0.8s ease-out forwards;
+    animation-fill-mode: both;
+}
+
+.service-card-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.service-card-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms ease-out;
+}
+.service-card-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-card-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms ease-in;
+}
+
+.skills-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: skillsFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes formElementFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form-element {
+    opacity: 0;
+    animation: formElementFadeIn 0.5s ease-out forwards;
+}
+.form-element-delay-1 {
+    animation-delay: 0.1s;
+}
+.form-element-delay-2 {
+    animation-delay: 0.2s;
+}
+.form-element-delay-3 {
+    animation-delay: 0.3s;
+}
+.form-element-delay-4 {
+    animation-delay: 0.4s;
+}
+
+@keyframes skillsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes skillsSectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.skills-section-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.skills-section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes servicesFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.services-fade-in {
+    opacity: 0;
+    animation: servicesFadeIn 0.8s ease-out forwards;
+}
+@keyframes servicesStagger {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.services-stagger {
+    animation: servicesStagger 0.6s ease-out forwards;
+    animation-delay: calc(var(--index) * 0.2s);
+}
+.services-text-fade {
+    opacity: 0;
+    animation: servicesFadeIn 0.8s ease-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes articleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.article-fade-in {
+    opacity: 0;
+    animation: articleFadeIn 0.8s ease-out forwards;
+}
+.article-fade-delay {
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+.skills-button-hover {
+    transition: all 0.3s ease;
+}
+.skills-button-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.skills-section-transition {
+    transition: all 0.5s ease-in-out;
+}
+.skills-section-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.skills-section-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+::-webkit-scrollbar {
+    width: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b6cb0;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2b6cb0;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2b6cb0 #000000;
+}
