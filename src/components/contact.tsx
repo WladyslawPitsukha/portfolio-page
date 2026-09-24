@@ -10,32 +10,18 @@ export const BlockInfo: React.FC<BlockInfoProps> = ({index, icon, main}) => {
     return(
         <div 
             key={index} 
-            className="group relative flex flex-col items-center justify-between gap-5 p-8 
-                bg-gray-800 rounded-lg transform transition-all duration-500 
-                hover:scale-105 hover:bg-gray-700 w-96 
-                hover:shadow-lg hover:shadow-blue-500/20"
+            className="group relative flex h-full w-full flex-col items-center justify-between gap-5 border border-white/10 bg-[var(--surface)] p-7 text-center transition-all duration-500 hover:-translate-y-2 hover:border-[var(--accent)]/60"
         >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 
-                rounded-lg blur opacity-25 group-hover:opacity-75 
-                transition duration-500 group-hover:scale-105">
-            </div>
             <Icon 
-                className="relative text-blue-500 w-16 h-16 transform transition-all 
-                    duration-500 group-hover:scale-110 group-hover:text-blue-400 
-                    group-hover:rotate-6"
+                    className="relative h-10 w-10 text-[var(--accent)] transform transition-all duration-500 group-hover:rotate-6"
             />
-            <h2 className="relative font-bold uppercase text-white tracking-wider 
-                transition-all duration-500 group-hover:text-blue-400 
-                group-hover:translate-y-[-5px]">
+                <h2 className="relative font-sans font-bold uppercase tracking-wider text-white transition-all duration-500 group-hover:text-[var(--accent-soft)]">
                 {title}
             </h2>
-            <p className="relative text-gray-300 text-center transition-all duration-500 
-                group-hover:text-white">
+            <p className="relative font-sans text-sm leading-relaxed text-[var(--muted)] transition-all duration-500 group-hover:text-white/80">
                 {text}
             </p>
-            <h3 className="relative font-bold text-blue-500 cursor-pointer 
-                transition-all duration-500 group-hover:text-blue-400 
-                group-hover:scale-105">
+            <h3 className="relative cursor-pointer font-sans text-sm font-bold text-[var(--accent)] transition-all duration-500 group-hover:text-[var(--accent-soft)]">
                 {link}
             </h3>
         </div>
@@ -44,7 +30,7 @@ export const BlockInfo: React.FC<BlockInfoProps> = ({index, icon, main}) => {
 
 export const ContactGrid = () => {
     return(
-        <div className="flex align-center gap-8 w-full max-w-6xl">
+        <div className="grid w-full max-w-6xl gap-6 md:grid-cols-3">
             {arrayBlocksInfo.map((obj, index) => (
                     <div
                         key={index}
@@ -66,7 +52,7 @@ export default function ContactSect() {
     return (
         <section 
             id="Contacts" 
-            className="flex flex-col align-center p-10 h-screen w-auto rounded-lg shadow-md gap-10"
+            className="portfolio-section flex flex-col gap-12"
         >
             <div className="animate-fadeIn">
                 <TitleComponent
@@ -77,7 +63,7 @@ export default function ContactSect() {
             </div>
             <ContactGrid />
             <div 
-                className="w-full max-w-6xl animate-fadeIn" 
+                className="w-full max-w-6xl border-t border-white/10 pt-10 animate-fadeIn" 
                 style={{ animationDelay: '0.6s' }}
             >
                 <ContactForm />

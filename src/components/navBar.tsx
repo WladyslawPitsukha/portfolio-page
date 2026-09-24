@@ -11,20 +11,20 @@ export default function NavBar() {
     const activeSection = HandleScroll();
 
     return (
-        <nav className="flex flex-col sticky top-0 h-screen transition-all duration-300 hover:shadow-xl">
-            <section className="flex items-center justify-center h-28 gap-5 bg-black transition-all duration-300 hover:bg-gray-900">
+        <nav className="sticky top-0 z-20 flex h-screen w-[76px] shrink-0 flex-col border-r border-white/10 bg-[#111513]/90 backdrop-blur md:w-56 transition-all duration-300">
+            <section className="flex h-28 items-center justify-center gap-3 border-b border-white/10 px-3 transition-all duration-300 md:justify-start md:px-6">
                 <Image
                     className='transform transition-all duration-300 hover:scale-110 rounded-full' 
                     src={Logo}
                     alt='My logo'
-                    width={70}
-                    height={70}
+                    width={52}
+                    height={52}
                 />
-                <h1 className="uppercase text-white font-bold text-xl tracking-wider transition-all duration-300 hover:text-blue-500">
+                <h1 className="hidden uppercase text-lg font-bold tracking-[0.25em] text-[var(--accent)] transition-all duration-300 md:block">
                     Me
                 </h1>
             </section>
-            <section className="flex flex-col items-start justify-between h-full py-9 w-13 bg-gray-800 overflow-y-auto transition-all duration-300">
+            <section className="flex h-full w-full flex-col items-start justify-between overflow-y-auto py-9 transition-all duration-300">
                 <div className="flex flex-col w-full">
                     {arrayNavItems.map((item, index) => (
                         <NavFuncItems

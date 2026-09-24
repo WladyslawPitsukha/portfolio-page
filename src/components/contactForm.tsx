@@ -1,58 +1,58 @@
 export default function ContactForm() {
     return (
-        <form className="space-y-4">
-            <div className="flex gap-20">
+        <form className="space-y-8">
+            <div className="grid gap-8 md:grid-cols-2">
                 <div className="flex-1 form-element form-element-delay-1">
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
+                        className="input-field font-sans"
                         id="firstName"
                         type="text"
                         placeholder=""
                     />
-                    <label className="block text-gray-400 text-sm font-bold mt-1" htmlFor="firstName">
+                    <label className="mt-2 block font-sans text-xs font-bold uppercase tracking-widest text-[var(--muted)]" htmlFor="firstName">
                         First Name
                     </label>
                 </div>
                 <div className="flex-1 form-element form-element-delay-1">
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
+                        className="input-field font-sans"
                         id="lastName"
                         type="text"
                         placeholder=""
                     />
-                    <label className="block text-gray-400 text-sm font-bold mt-1" htmlFor="lastName">
+                    <label className="mt-2 block font-sans text-xs font-bold uppercase tracking-widest text-[var(--muted)]" htmlFor="lastName">
                         Last Name
                     </label>
                 </div>
             </div>
-            <div className="flex gap-20">
+            <div className="grid gap-8 md:grid-cols-2">
                 <div className="flex-1 form-element form-element-delay-2">
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
+                        className="input-field font-sans"
                         id="phone"
                         type="tel"
                         placeholder=""
                     />
-                    <label className="block text-gray-400 text-sm font-bold mt-1" htmlFor="phone">
+                    <label className="mt-2 block font-sans text-xs font-bold uppercase tracking-widest text-[var(--muted)]" htmlFor="phone">
                         Phone
                     </label>
                 </div>
                 <div className="flex-1 form-element form-element-delay-2">
                     <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
+                        className="input-field font-sans"
                         id="email"
                         type="email"
                         placeholder=""
                     />
-                    <label className="block text-gray-400 text-sm font-bold mt-1" htmlFor="email">
+                    <label className="mt-2 block font-sans text-xs font-bold uppercase tracking-widest text-[var(--muted)]" htmlFor="email">
                         Email
                     </label>
                 </div>
             </div>
-            <div className="flex gap-20">
+            <div className="grid gap-8 md:grid-cols-2">
                 <div className="flex-1 form-element form-element-delay-3">
                     <select
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline bg-black"
+                        className="input-field font-sans"
                         id="service"
                     >
                         {[
@@ -65,25 +65,25 @@ export default function ContactForm() {
                             </option>
                         ))}
                     </select>
-                    <label className="block text-gray-400 text-sm font-bold mt-1" htmlFor="service">
+                    <label className="mt-2 block font-sans text-xs font-bold uppercase tracking-widest text-[var(--muted)]" htmlFor="service">
                         Choose a Service
                     </label>
                 </div>
                 <div className="flex-1 form-element form-element-delay-3">
                     <textarea
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline bg-black"
+                        className="input-field font-sans"
                         id="message"
                         rows={4}
                         placeholder=""
                     ></textarea>
-                    <label className="block text-gray-400 text-sm font-bold mt-1" htmlFor="message">
+                    <label className="mt-2 block font-sans text-xs font-bold uppercase tracking-widest text-[var(--muted)]" htmlFor="message">
                         Message
                     </label>
                 </div>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between border-t border-white/10 pt-6">
                 <button
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline form-element form-element-delay-4"
+                    className="bg-[var(--accent)] px-7 py-3 font-sans font-bold text-[#101211] transition-transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)] form-element form-element-delay-4"
                     type="submit"
                 >
                     Send
