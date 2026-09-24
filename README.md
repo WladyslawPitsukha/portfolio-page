@@ -1,76 +1,98 @@
-# portfolio-page
+# Portfolio Page
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
-
-***
+A modern and responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. The project presents personal information, professional experience, skills, services, and contact details in a clean dark-themed layout.
 
 ## Features
 
-- Responsive design that works on all devices
-- Dark/Light mode support
-- Smooth scrolling navigation
-- Interactive UI components
-- Contact form
-- Skills and experience showcase
-- Portfolio gallery
-- Social media integration
-
-***
+- Responsive layout for desktop, tablet, and mobile devices
+- Modern dark portfolio aesthetic with accent highlights
+- Smooth scrolling navigation and section transitions
+- About, biography, skills, and experience sections
+- Portfolio showcase with project cards
+- Social links and contact section
+- Contact form UI with service selection
+- Custom animations and reusable components
 
 ## Tech Stack
 
-- **Framework:** Next.js 14
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Icons:** React Icons
-- **Animations:** Custom CSS animations
-- **State Management:** React Hooks
-
-***
+- Framework: Next.js 14
+- Language: TypeScript
+- Styling: Tailwind CSS
+- UI icons: React Icons
+- Charts and visual data: Chart.js
+- Animation: custom CSS and transitions
+- State handling: React Hooks
 
 ## Project Structure
 
+```text
 portfolio-page/
 ├── src/
 │   ├── app/
-│   ├── components/
 │   ├── assets/
-│   ├── styles/
+│   ├── components/
+│   ├── constants/
 │   ├── types/
 │   └── utils/
-├── public/
-└── ...configuration files
+├── doc/
+├── next.config.mjs
+├── package.json
+├── postcss.config.mjs
+├── tailwind.config.ts
+├── tsconfig.json
+├── README.md
+└── .gitignore
+```
 
-***
+## Key Sections
 
-## Key Components
-
-- **Navigation Bar:** Responsive sidebar navigation with smooth scrolling
-- **Home Section:** Introduction and quick links
-- **About Section:** Personal and professional information
-- **Services Section:** Showcase of offered services
-- **Skills Section:** Interactive display of technical skills
-- **Portfolio Section:** Gallery of projects
-- **Networks Section:** Social media integration
-- **Contact Section:** Contact form with service selection
-
-***
+- Navigation bar with anchored section navigation
+- Home section with introduction and CTA content
+- About section with personal background
+- Services section highlighting key offerings
+- Skills section with technical stack and timeline blocks
+- Experience section with work history and details
+- Portfolio gallery for selected projects
+- Contact section and social media links
 
 ## Getting Started
 
-1. Clone the repository
+1. Clone the repository:
+
+```bash
+git clone https://github.com/WladyslawPitsukha/portfolio-page.git
+cd portfolio-page
+```
+
 2. Install dependencies:
 
-- bash
-- npm install
+```bash
+npm install
+```
 
 3. Run the development server:
 
-- bash
-- npm run dev
+```bash
+npm run dev
+```
 
-Open [the page](http://localhost:3000) in your browser
+4. Open the app in your browser:
+
+```text
+http://localhost:3000
+```
+
+## Scripts
+
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
 ## Contact
 
-For any inquiries, please reach out on [email](pitsukhavladislav@gmail.com)
+For any inquiries, please reach out via email:
+
+- [pitsukhavladislav@gmail.com](mailto:pitsukhavladislav@gmail.com)
