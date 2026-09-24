@@ -8,7 +8,7 @@ import SkillsSect from "@/components/skills";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full h-full bg-black overflow-y-hidden">
+    <main className="flex min-h-screen flex-col overflow-x-hidden bg-transparent">
       <HomeSect />
       <AboutMeSect />
       <ServicesSect />
