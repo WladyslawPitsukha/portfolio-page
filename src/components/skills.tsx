@@ -50,7 +50,7 @@ export default function SkillsSect() {
     return (
         <section 
             id="Skills" 
-            className={`flex flex-col items-center justify-center min-h-screen w-full gap-20 p-10 mt-10 
+            className={`portfolio-section flex flex-col items-center gap-14 
                 skills-section-fade ${isVisible ? 'skills-section-visible' : ''}`}
         >
             <article 
@@ -62,7 +62,7 @@ export default function SkillsSect() {
                     description="Crafting Stories through Design, Developing and Imagination"
                     position="center"
                 />
-                <div className="flex justify-between items-center gap-10 flex-wrap">
+                <div className="flex w-full flex-wrap items-center justify-between gap-5">
                     <div className={`transform transition-all duration-300 delay-500
                         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <DownloadCV cvUrl="../doc/Resume_3 (1).pdf" />
@@ -70,19 +70,19 @@ export default function SkillsSect() {
                     {arraySectItems.map((obj, index) => ( 
                         <div
                             key={index}
-                            className={`flex items-center justify-center rounded-md gap-4 px-8 py-5 shadow-lg cursor-pointer
+                            className={`flex cursor-pointer items-center justify-center gap-4 border px-5 py-3 font-sans shadow-lg
                                 transform transition-all duration-300 hover:scale-105 
                                 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
                                 ${activeIndex === index 
-                                    ? 'bg-blue-700 shadow-blue-500/50' 
-                                    : 'bg-gray-500 hover:bg-blue-700'}`}
+                                    ? 'border-[var(--accent)] bg-[var(--accent)] shadow-black/20' 
+                                    : 'border-white/15 bg-transparent hover:border-[var(--accent)] hover:bg-white/5'}`}
                             style={{ transitionDelay: `${index * 100 + 800}ms` }}
                             onClick={() => {
                                 setActiveIndex(index);
                                 setActiveArticle(obj.button);
                             }}
                         >
-                            <h4 className="font-bold text-white tracking-wider">
+                            <h4 className={`font-bold tracking-wider ${activeIndex === index ? 'text-[#101211]' : 'text-white'}`}>
                                 {obj.button}
                             </h4>
                         </div>

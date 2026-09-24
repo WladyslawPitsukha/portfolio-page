@@ -10,7 +10,7 @@ export const arrayEducate: BlockCompProps[] = [
         time: "09.2019-07.2024",
         addInfo: {
             specialization: "Business Analyst",
-            description: "A comprehensive program focused on developing analytical skills and business acumen, preparing students for a career in business analysis.",
+            description: "A comprehensive program focused on analytical thinking, business processes, data interpretation, and practical business analysis.",
         },
         percent: calculateYearPercentage("09.2019-07.2024")
     },
@@ -22,20 +22,44 @@ export const arrayEducate: BlockCompProps[] = [
         time: "10.2020-05.2021",
         addInfo: {
             specialization: "Frontend specialist",
-            description: "An introductory course designed to equip students with the fundamental skills required for entry-level positions in frontend development.",
+            description: "An introductory course covering JavaScript fundamentals, browser APIs, responsive layouts, and the core skills required for frontend development.",
         },
         percent: calculateYearPercentage("10.2020-05.2021")
     },
     {   
         head: {
-            title: 'Courses "Frontend Developer"',
-            link: "https://rs.school/courses/javascript",
+            title: 'Meta Full Stack Developer"',
+            link: "https://www.coursera.org/specializations/meta-full-stack-developer",
         },
         time: "10.2022-05.2023",
         addInfo: {
             specialization: "Frontend specialist",
-            description: "An advanced course aimed at enhancing expertise in frontend technologies, covering modern frameworks and best practices in the industry.",
+            description: "An advanced course covering modern frontend architecture, JavaScript, TypeScript, React, responsive interfaces, and production best practices.",
         },
         percent: calculateYearPercentage("10.2022-05.2023")
+    },
+    {
+        head: {
+            title: 'Coursera "Python for Everybody"',
+            link: "https://www.coursera.org/learn/programming-in-python?specialization=meta-full-stack-developer",
+        },
+        time: "04.2026 - present",
+        addInfo: {
+            specialization: "Python development",
+            description: "Practical Python training covering programming fundamentals, data structures, automation, and problem solving.",
+        },
+        percent: 55
+    },
+    {
+        head: {
+            title: 'Coursera "AI Google"',
+            link: "https://www.coursera.org/specializations/google-ai",
+        },
+        time: "06.2026 - present",
+        addInfo: {
+            specialization: "Artificial intelligence fundamentals",
+            description: "An accessible introduction to AI concepts, machine-learning workflows, project opportunities, and responsible AI adoption.",
+        },
+        percent: 45
     }
 ]
