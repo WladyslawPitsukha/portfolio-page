@@ -1,14 +1,36 @@
 export default function calculateYearPercentage(period: string): number {
-    const [start, end] = period.split("-");
-    const [startMonth, startYear] = start.split(".").map(Number);
-    const [endMonth, endYear] = end.split(".").map(Number);
+    const normalizedPeriod = period.replace(/\s+/g, "");
+    const [startRaw, endRaw] = normalizedPeriod.split("-");
 
-    if (startYear > endYear || (startYear === endYear && startMonth > endMonth)) {
-        throw new Error("Mistake");
+    if (!startRaw || !endRaw) {
+        return 0;
     }
 
-    const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
-    const percentage = (Math.min(100, (totalMonths / 12) * 100));
-    
+    const parseDatePart = (value: string) => {
+        const [monthPart, yearPart] = value.includes(".") ? value.split(".") : value.split("-");
+        const month = Number(monthPart);
+        const year = Number(yearPart);
+
+        if (!Number.isFinite(month) || !Number.isFinite(year) || month < 1 || month > 12) {
+            return null;
+        }
+
+        return { month, year };
+    };
+
+    const start = parseDatePart(startRaw);
+    const end = parseDatePart(endRaw);
+
+    if (!start || !end) {
+        return 0;
+    }
+
+    if (start.year > end.year || (start.year === end.year && start.month > end.month)) {
+        return 0;
+    }
+
+    const totalMonths = (end.year - start.year) * 12 + (end.month - start.month);
+    const percentage = Math.min(100, (totalMonths / 12) * 100);
+
     return Math.round(percentage);
 }
