@@ -10,7 +10,7 @@ export const arrayBlocksInfo: BlockInfoProps[]  = [
         icon: BsFillPhoneVibrateFill,
         main: {
             title: "Phone",
-            text: "You can contact me by phone for more information or to discuss your questions. I will be happy to help!",
+            text: "Call me to discuss a project, ask a question, or explore how I can help with your digital product.",
             link: "+48507667575",
         }
     },
@@ -19,7 +19,7 @@ export const arrayBlocksInfo: BlockInfoProps[]  = [
         icon: FaMapLocationDot,
         main: {
             title: "Location",
-            text: "Currently, I am in Warsaw, but from time to time I visit Krakow and Gdansk.",
+            text: "I am currently based in Warsaw and occasionally work from Krakow and Gdansk.",
             link: "View on map",
         }
     },
@@ -27,8 +27,8 @@ export const arrayBlocksInfo: BlockInfoProps[]  = [
         index: 3,
         icon: MdContactMail,
         main: {
-            title: "Monday-Sunday",
-            text: "You can contact me via email for any questions or proposals. I am always happy to help and will respond to your messages as soon as possible.",
+            title: "Email",
+            text: "Send me an email with your questions, ideas, or project proposal. I will reply as soon as possible.",
             link: "pitsukhavladislav@gmail.com",
         }
     },

@@ -6,29 +6,23 @@ export const ItemServices: React.FC<ServicesProps> = ({icon, infa, index}) => {
     const Icon = icon;
     const { title, text, addText } = infa;
     return(
-        <div className={`group relative w-auto h-auto rounded-lg pt-16 px-9 pb-9 bg-gray-700 
-            transition-all duration-300 hover:bg-gray-600 hover:transform hover:scale-105
+        <div className={`group relative h-full rounded-sm border border-white/10 bg-[var(--surface)] px-6 pb-7 pt-16 
+            transition-all duration-300 hover:-translate-y-2 hover:border-[var(--accent)]/60
             services-fade-in services-stagger`}
             style={{ '--index': index } as React.CSSProperties}>
-            <div className="absolute -top-10 left-8 w-20 h-20 rounded-lg flex items-center justify-center p-3 
-                bg-blue-700 transition-all duration-300 group-hover:bg-blue-600 
-                group-hover:shadow-lg group-hover:scale-110">
+            <div className="absolute -top-6 left-6 flex h-12 w-12 items-center justify-center rounded-sm border border-[var(--accent)]/60 bg-[var(--accent)] p-3 transition-all duration-300 group-hover:rotate-6">
                 <Icon 
-                    className="w-14 h-14 text-white transition-all duration-300 
-                        group-hover:text-gray-100 group-hover:transform group-hover:rotate-6"
+                    className="h-7 w-7 text-[#101211] transition-all duration-300"
                 />
             </div>
             <div className="flex flex-col items-start justify-between gap-5">
-                <h2 className="text-xl font-bold text-white uppercase tracking-wider 
-                    transition-colors duration-300 group-hover:text-blue-400">
+                <h2 className="font-sans text-lg font-bold uppercase tracking-wider text-white transition-colors duration-300 group-hover:text-[var(--accent-soft)]">
                     {title}
                 </h2>
-                <h4 className="text-left text-gray-300 leading-relaxed transition-colors 
-                    duration-300 group-hover:text-white">
+                <h4 className="text-left font-sans text-sm leading-relaxed text-[var(--muted)] transition-colors duration-300 group-hover:text-white/90">
                     {text}
                 </h4>
-                <h4 className="text-left text-gray-300 leading-relaxed transition-colors 
-                    duration-300 group-hover:text-white">
+                <h4 className="text-left font-sans text-sm leading-relaxed text-[var(--muted)] transition-colors duration-300 group-hover:text-white/90">
                     {addText}
                 </h4>
             </div>
@@ -38,14 +32,10 @@ export const ItemServices: React.FC<ServicesProps> = ({icon, infa, index}) => {
 
 export const AnimatedTextService: React.FC<{text: string}> = ({text}) => {
     return (
-        <article className="group relative w-full overflow-hidden bg-gray-800 rounded-lg p-6 
-            transform transition-all duration-500 hover:scale-105 services-text-fade">
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600 rounded-full 
-                opacity-20 blur-xl transition-all duration-500 
-                group-hover:scale-150 group-hover:opacity-30" />
-            <p className="relative text-gray-300 text-lg leading-relaxed text-center 
+        <article className="group relative w-full overflow-hidden border-y border-white/10 py-7 services-text-fade">
+            <p className="relative text-center font-sans text-lg leading-relaxed text-[var(--muted)]
                 transition-all duration-500 transform 
-                group-hover:text-white group-hover:translate-y-[-5px]">
+                group-hover:text-white">
                 {text}
             </p>
         </article>
@@ -54,7 +44,7 @@ export const AnimatedTextService: React.FC<{text: string}> = ({text}) => {
 
 export default function ServicesSect() {
     return(
-        <section id="Services" className="flex flex-col justify-between h-screen w-full items-center gap-20 p-10">
+        <section id="Services" className="portfolio-section flex flex-col items-center gap-16">
             <div className="services-fade-in">
                 <TitleComponent 
                     title="My services"
@@ -62,7 +52,7 @@ export default function ServicesSect() {
                     position="center"
                 />
             </div>
-            <article className='flex items-center justify-around w-auto gap-10'>
+            <article className='grid w-full max-w-6xl gap-10 md:grid-cols-2 xl:grid-cols-3'>
                 {arrayServices.map((service, index) => (
                     <div 
                         key={index}

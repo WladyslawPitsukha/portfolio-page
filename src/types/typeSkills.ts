@@ -7,6 +7,8 @@ export type BlockCompProps = {
     addInfo: {
         specialization: string;
         description: string;
+        highlights?: string[];
+        skills?: string[];
     }
     percent: number;
 }

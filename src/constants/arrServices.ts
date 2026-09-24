@@ -8,25 +8,25 @@ export const arrayServices: ServicesProps[] = [
     {
         icon: RiPagesFill,
         infa: {
-            title: "Web-sites",
-            text: "I create unique and adaptive websites that reflect your brand's personality and provide an excellent user experience across all devices.",
-            addText: "Using modern frameworks like Next.js and React, combined with responsive design principles, SEO optimization, and performance best practices to deliver fast-loading, accessible websites that engage your audience and drive conversions."
+            title: "Websites",
+            text: "I create distinctive, responsive websites that reflect your brand and provide a clear, enjoyable experience on every device.",
+            addText: "I use Next.js, React, semantic HTML, responsive CSS, SEO fundamentals, and performance best practices to deliver fast and accessible websites."
         }
     },
     {
         icon: SiMaterialdesign,
         infa: {
-            title: "Web-Design",
-            text: "I specialize in developing powerful and interactive web applications that help automate processes and improve customer interaction.",
-            addText: "Implementing modern UI/UX principles, utilizing design systems, creating responsive layouts, and incorporating engaging animations to deliver intuitive and aesthetically pleasing interfaces that enhance user engagement and satisfaction."
+            title: "Web design",
+            text: "I design clear and engaging interfaces that make products easier to understand, use, and remember.",
+            addText: "I combine UI/UX principles, design systems, responsive layouts, and purposeful animation to create polished digital experiences."
         }
     },
     {
         icon: MdAppShortcut,
         infa: {
-            title: "Web-apps",
-            text: "I offer custom solutions for creating web applications that align with your business goals and ensure high performance and security.",
-            addText: "Developing feature-rich applications using TypeScript, state management solutions, and modern architectural patterns, while ensuring scalability, maintainability, and optimal performance through efficient code organization and best practices."
+            title: "Web apps",
+            text: "I build custom web applications aligned with business goals, user needs, performance targets, and security requirements.",
+            addText: "I work with TypeScript, React, state management, Python, and modern architecture patterns to create scalable and maintainable products."
         }
     }
 ]

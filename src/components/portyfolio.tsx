@@ -13,19 +13,13 @@ export const PortfolioCard: React.FC<PortfolioItemProps> = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex flex-col items-start p-6 bg-gray-800 rounded-lg 
-                transform transition-all duration-300 hover:scale-105 hover:bg-gray-700"
+            className="group relative flex h-full flex-col items-start border border-white/10 bg-[var(--surface)] p-7 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--accent)]/60"
         >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 
-                rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-300" />
-            <Icon className="relative text-blue-500 w-16 h-16 mb-4 transform transition-all 
-                duration-300 group-hover:scale-110 group-hover:text-blue-400" />
-            <h3 className="relative text-xl font-bold text-white mb-2 transition-all 
-                duration-300 group-hover:text-blue-400">
+            <Icon className="relative mb-8 h-10 w-10 text-[var(--accent)] transition-all duration-300 group-hover:rotate-6" />
+            <h3 className="relative mb-3 text-xl font-bold text-white transition-all duration-300 group-hover:text-[var(--accent-soft)]">
                 {title}
             </h3>
-            <p className="relative text-gray-400 leading-relaxed transition-colors 
-                duration-300 group-hover:text-gray-300">
+            <p className="relative font-sans leading-relaxed text-[var(--muted)] transition-colors duration-300 group-hover:text-white/80">
                 {description}
             </p>
         </a>
@@ -34,10 +28,10 @@ export const PortfolioCard: React.FC<PortfolioItemProps> = ({
 
 export default function PortSect() {
     return(
-        <section id="Portfolio" className="flex flex-col items-start justify-center gap-20 p-10 mt-10">
+        <section id="Portfolio" className="portfolio-section flex flex-col items-start gap-14">
             <TitleComponent
                 title="My Recent Portfolio"
-                description="Elevate your brand to new heights with my porttolio expertise"
+                description="Selected work combining thoughtful interfaces, reliable frontend engineering, and clear product goals"
                 position="start"
             />
             <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
