@@ -16,7 +16,7 @@ export const ItemServices: React.FC<ServicesProps> = ({icon, infa, index}) => {
                 />
             </div>
             <div className="flex flex-col items-start justify-between gap-5">
-                <h2 className="font-sans text-lg font-bold uppercase tracking-wider text-white transition-colors duration-300 group-hover:text-[var(--accent-soft)]">
+                <h2 className="font-sans text-lg font-bold uppercase tracking-wider text-white transition-colors duration-300 group-hover:text-[var(--accent-soft)] sm:text-xl">
                     {title}
                 </h2>
                 <h4 className="text-left font-sans text-sm leading-relaxed text-[var(--muted)] transition-colors duration-300 group-hover:text-white/90">

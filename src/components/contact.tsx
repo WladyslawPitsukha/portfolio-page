@@ -15,7 +15,7 @@ export const BlockInfo: React.FC<BlockInfoProps> = ({index, icon, main}) => {
             <Icon 
                     className="relative h-10 w-10 text-[var(--accent)] transform transition-all duration-500 group-hover:rotate-6"
             />
-                <h2 className="relative font-sans font-bold uppercase tracking-wider text-white transition-all duration-500 group-hover:text-[var(--accent-soft)]">
+                <h2 className="relative font-sans text-lg font-bold uppercase tracking-wider text-white transition-all duration-500 group-hover:text-[var(--accent-soft)] sm:text-xl">
                 {title}
             </h2>
             <p className="relative font-sans text-sm leading-relaxed text-[var(--muted)] transition-all duration-500 group-hover:text-white/80">

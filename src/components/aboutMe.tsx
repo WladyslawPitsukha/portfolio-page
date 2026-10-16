@@ -16,7 +16,7 @@ export const ArticleFact = ({ icon, title, text, }: {
         >
             <div className="relative flex items-center gap-4">
                 <Icon className="h-10 w-10 text-[var(--accent)] transition-transform duration-300 group-hover:rotate-6" />
-                <h2 className="text-2xl font-bold text-white transition-colors duration-300 group-hover:text-[var(--accent-soft)]">
+                <h2 className="text-xl font-bold text-white transition-colors duration-300 group-hover:text-[var(--accent-soft)] sm:text-2xl">
                     {title}
                 </h2>
             </div>

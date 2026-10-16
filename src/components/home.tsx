@@ -26,7 +26,7 @@ export default function HomeSect() {
             <article className="flex w-full max-w-5xl flex-col items-start justify-between gap-8 md:w-4/5 lg:gap-10">
                 <div className="animate-fadeIn">
                     <p className="mb-5 font-sans text-xs font-bold uppercase tracking-[0.35em] text-[var(--accent)]">Frontend developer / creative technologist</p>
-                    <h1 className="text-4xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-8xl">
+                    <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
                         Hi, I&apos;m Wladyslaw!
                         <br />
                         Creative developer.
