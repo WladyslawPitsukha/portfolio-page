@@ -45,6 +45,23 @@ export default function ArtBlockSkill({array}: {array: BlockCompProps[]}) {
                             </div>
                         )}
                     </div>
+                    <div className="flex w-full items-center gap-3" aria-label={`${obj.percent}%`}>
+                        <div
+                            className="progressBar"
+                            role="progressbar"
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                            aria-valuenow={obj.percent}
+                        >
+                            <div
+                                className="progressFill"
+                                style={{ '--progress-width': `${obj.percent}%` } as React.CSSProperties}
+                            />
+                        </div>
+                        <span className="shrink-0 font-sans text-sm font-medium text-[var(--accent-soft)]">
+                            {obj.percent}%
+                        </span>
+                    </div>
                 </div>
             ))}
         </article>

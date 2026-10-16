@@ -1,25 +1,34 @@
 export default function calculateYearPercentage(period: string): number {
-    const normalizedPeriod = period.replace(/\s+/g, "");
-    const [startRaw, endRaw] = normalizedPeriod.split("-");
+    const datePattern = /(\d{1,2})[.-](\d{4})|present/gi;
+    const dateParts: RegExpExecArray[] = [];
+    let datePart: RegExpExecArray | null;
 
-    if (!startRaw || !endRaw) {
+    while ((datePart = datePattern.exec(period)) !== null) {
+        dateParts.push(datePart);
+    }
+
+    if (dateParts.length < 2) {
         return 0;
     }
 
-    const parseDatePart = (value: string) => {
-        const [monthPart, yearPart] = value.includes(".") ? value.split(".") : value.split("-");
-        const month = Number(monthPart);
-        const year = Number(yearPart);
+    const parseDatePart = (match: RegExpExecArray) => {
+        if (match[0].toLowerCase() === "present") {
+            const now = new Date();
+            return { month: now.getMonth() + 1, year: now.getFullYear() };
+        }
 
-        if (!Number.isFinite(month) || !Number.isFinite(year) || month < 1 || month > 12) {
+        const month = Number(match[1]);
+        const year = Number(match[2]);
+
+        if (month < 1 || month > 12) {
             return null;
         }
 
         return { month, year };
     };
 
-    const start = parseDatePart(startRaw);
-    const end = parseDatePart(endRaw);
+    const start = parseDatePart(dateParts[0]);
+    const end = parseDatePart(dateParts[1]);
 
     if (!start || !end) {
         return 0;
