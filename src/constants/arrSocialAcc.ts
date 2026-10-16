@@ -32,6 +32,6 @@ export const ArraySocialAcc: SocialAccProps[] = [
     {
         icon: FaGithub,
         title: "GitHub",
-        link: "https://github.com/WladislawPitsukha",
+        link: "https://github.com/WladyslawPitsukha",
     }
 ]
