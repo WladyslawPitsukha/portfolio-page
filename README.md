@@ -64,19 +64,19 @@ git clone https://github.com/WladyslawPitsukha/portfolio-page.git
 cd portfolio-page
 ```
 
-2. Install dependencies:
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. Run the development server:
+1. Run the development server:
 
 ```bash
 npm run dev
 ```
 
-4. Open the app in your browser:
+1. Open the app in your browser:
 
 ```text
 http://localhost:3000
