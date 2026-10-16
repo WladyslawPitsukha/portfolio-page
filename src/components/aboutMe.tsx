@@ -32,13 +32,20 @@ export default function AboutMeSect() {
         <section id="About me" className="portfolio-section flex flex-col items-start gap-14">
             <TitleComponent 
                 title="About me"
-                description="Crafting stories through design, developing and  
-                innovation"
+                description="Building thoughtful, reliable web experiences with modern technologies"
                 position="start"
             />
             <div className="grid w-full gap-12 md:grid-cols-2">
-                <ArticleFact icon={CiCoffeeCup} title="My Ambition" text="My ambitions lie in creating unique and adaptive websites that accurately reflect your brand's personality and provide an excellent user experience across all devices. I strive for excellence in developing powerful and interactive web applications that help automate processes and enhance customer interaction. My goal is to offer custom solutions for creating web applications that align with your business goals, ensuring high performance and security. I am constantly seeking innovation and improving my skills to provide clients with the best solutions and help them achieve success in the digital world." />
-                <ArticleFact icon={GoGoal} title="My Purpose" text="My purpose is to create unique and adaptive websites that accurately reflect your brand's personality and provide an excellent user experience across all devices. I specialize in developing powerful and interactive web applications that help automate processes and improve customer interaction. I offer custom solutions for creating web applications that align with your business goals and ensure high performance and security. My mission is to help your business reach new heights in the digital world by providing the best solutions that ensure success and growth." />
+                <ArticleFact
+                    icon={CiCoffeeCup}
+                    title="How I work"
+                    text="I take a thoughtful, hands-on approach to development: understanding the problem, breaking it into manageable steps, and building clear, maintainable solutions. I value collaboration, attention to detail, and steady progress, and I keep learning so I can take on new challenges with confidence."
+                />
+                <ArticleFact
+                    icon={GoGoal}
+                    title="What I bring"
+                    text="With 2+ years of commercial frontend experience, I have worked on responsive banking interfaces, dashboards, internal monitoring systems, and reusable UI components using React, TypeScript, and Next.js. I am also building my full-stack skills through practical work with Node.js, Python, FastAPI, SQL, and PostgreSQL, including REST APIs, backend logic, data processing, and automation."
+                />
             </div>
         </section>
     )

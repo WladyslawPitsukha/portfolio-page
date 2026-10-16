@@ -34,10 +34,10 @@ export default function HomeSect() {
                 </div>
                 <div className="max-w-3xl space-y-5 font-sans text-base font-medium leading-relaxed text-[var(--muted)] animate-slideIn sm:text-lg">
                     <p>
-                        Frontend Developer with 2+ years of commercial experience building web applications with React, TypeScript, and Next.js. Experienced in developing dashboards, admin panels, monitoring systems, and reusable UI components in cross-functional teams.
+                        Frontend Developer with 2+ years of commercial experience building modern web applications with React, TypeScript, and Next.js. Skilled in developing responsive banking interfaces, dashboards, internal monitoring systems, and reusable UI components. Focused on writing clean, maintainable code, improving frontend performance, and delivering intuitive user experiences in cross-functional teams.
                     </p>
                     <p>
-                        Expanding into full-stack development with Python, Node.js, TypeScript, SQL, and PostgreSQL, with hands-on experience building REST APIs, backend services, automated tests, and database-driven applications. Familiar with Angular and FastAPI, with a strong focus on maintainable, scalable, and production-ready web applications.
+                        Actively expanding into full-stack development through hands-on projects with Node.js, Python, FastAPI, SQL, and PostgreSQL. Experienced in building REST APIs, implementing backend logic, processing data, and developing automation tools. Driven by continuous learning and a commitment to building reliable, scalable, and user-focused applications.
                     </p>
                     <div className="grid gap-3 border-l border-[var(--accent)]/60 pl-5 text-sm sm:grid-cols-2 sm:text-base">
                         <p><strong className="text-white">Frontend:</strong> React, Next.js, Angular, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS</p>
