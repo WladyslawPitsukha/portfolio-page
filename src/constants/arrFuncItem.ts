@@ -3,7 +3,8 @@ import { CgProfile } from "react-icons/cg";
 import { TiHome } from "react-icons/ti";
 import { HiPencilAlt } from "react-icons/hi";
 import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
-import { PiHandbagSimpleFill, PiNetworkSlashFill } from "react-icons/pi";
+import { PiBriefcaseFill, PiHandbagSimpleFill, PiNetworkSlashFill } from "react-icons/pi";
+import { FaGraduationCap } from "react-icons/fa";
 import { TbLayoutCardsFilled } from "react-icons/tb";
 
 import { FuncItemsProps } from "@/types/typeFuncItems";
@@ -30,6 +31,16 @@ export const arrayNavItems: FuncItemsProps[] = [
         icon: PiHandbagSimpleFill,
         text: "Skills",
         onClick: () => SectionScroll('Skills')
+    },
+    {
+        icon: PiBriefcaseFill,
+        text: "Experience",
+        onClick: () => SectionScroll('Experience')
+    },
+    {
+        icon: FaGraduationCap,
+        text: "Education",
+        onClick: () => SectionScroll('Education')
     },
     {
         icon: TbLayoutCardsFilled,

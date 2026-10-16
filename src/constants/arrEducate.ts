@@ -31,24 +31,24 @@ export const arrayEducate: BlockCompProps[] = [
             title: 'Meta Full Stack Developer"',
             link: "https://www.coursera.org/specializations/meta-full-stack-developer",
         },
-        time: "10.2022-05.2023",
+        time: "06.2026 - present",
         addInfo: {
             specialization: "Frontend specialist",
             description: "An advanced course covering modern frontend architecture, JavaScript, TypeScript, React, responsive interfaces, and production best practices.",
         },
-        percent: calculateYearPercentage("10.2022-05.2023")
+        percent: calculateYearPercentage("06.2026 - present")
     },
     {
         head: {
             title: 'Coursera "Python for Everybody"',
             link: "https://www.coursera.org/learn/programming-in-python?specialization=meta-full-stack-developer",
         },
-        time: "04.2026 - present",
+        time: "06.2026 - 10.2026",
         addInfo: {
             specialization: "Python development",
             description: "Practical Python training covering programming fundamentals, data structures, automation, and problem solving.",
         },
-        percent: 55
+        percent: calculateYearPercentage("06.2026 - 10.2026")
     },
     {
         head: {
@@ -60,6 +60,6 @@ export const arrayEducate: BlockCompProps[] = [
             specialization: "Artificial intelligence fundamentals",
             description: "An accessible introduction to AI concepts, machine-learning workflows, project opportunities, and responsible AI adoption.",
         },
-        percent: 45
+        percent: calculateYearPercentage("06.2026 - present")
     }
 ]

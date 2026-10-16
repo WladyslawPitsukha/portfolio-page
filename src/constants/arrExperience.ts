@@ -1,18 +1,15 @@
 import { BlockCompProps } from "@/types/typeSkills";
 import calculateYearPercentage from "@/utils/calculaterPer";
 
-const nowTime = new Date();
-const curDate = `${(nowTime.getMonth() + 1).toString().padStart(2, '0')}-${nowTime.getFullYear()}`
-
 export const arrayExperience: BlockCompProps[] = [
     {
         head: {
-            title: "Epam System",
-            link: "https://www.epam.com/",
+            title: "Poldevs Software House",
+            link: "https://www.poldevs.com/",
         },
-        time: "01.2023 - present",
+        time: "05.2025 - 12.2025",
         addInfo: {
-            specialization: "Frontend Developer",
+            specialization: "Junior Frontend Developer",
             description: "Developing modern web applications with React, Next.js, and TypeScript. Creating responsive interfaces, optimizing performance, and maintaining high code quality. Using Python for scripting and automation where appropriate.",
             highlights: [
                 "Participated in hands-on frontend application development and built interactive web components.",
@@ -22,16 +19,16 @@ export const arrayExperience: BlockCompProps[] = [
             ],
             skills: ["React", "Next.js", "TypeScript", "Python", "REST APIs", "Responsive layout"],
         },
-        percent: calculateYearPercentage(`01.2023-${curDate}`)
+        percent: calculateYearPercentage(`05.2025-12.2025`)
     }, 
     {
         head: {
             title: "Priorbank",
             link: "https://www.priorbank.by/",
         },
-        time: "11.2022 - 07.2023",
+        time: "04.2024 - 12.2024",
         addInfo: {
-            specialization: "Frontend Developer",
+            specialization: "Junior Frontend Developer",
             description: "Developed and maintained web applications with modern frontend technologies. Contributed to performance optimization, interface improvements, and maintainable implementation patterns.",
             highlights: [
                 "Developed internal and client-facing banking interfaces using React and TypeScript, contributing approximately 10% of UI components.",
@@ -42,16 +39,17 @@ export const arrayExperience: BlockCompProps[] = [
             ],
             skills: ["React", "Next.js", "TypeScript", "REST APIs", "Tailwind CSS", "Responsive layout"],
         },
-        percent: calculateYearPercentage("11.2022-07.2023")
+        percent: calculateYearPercentage("04.2024-12.2024")
     },
+    
     {
         head: {
-            title: "TopSoft.pl",
-            link: "https://www.topsoft.pl/",
+            title: "TopSoft",
+            link: "https://www.topsoft.by/",
         },
-        time: "04.2024 - 08.2024",
+        time: "12.2023 - 05.2024",
         addInfo: {
-            specialization: "Frontend Developer",
+            specialization: "Intern Frontend Developer",
             description: "Developed new features for a job-search platform, focusing on responsive and accessible interfaces, reliable user flows, and application performance.",
             highlights: [
                 "Developed an internal monitoring application end-to-end, including UI/UX, design, and functionality, contributing approximately 10% to the company’s internal tooling.",
@@ -61,6 +59,6 @@ export const arrayExperience: BlockCompProps[] = [
             ],
             skills: ["HTML5/CSS3", "Git", "React", "REST APIs", "JavaScript", "Figma", "TypeScript"],
         },
-        percent: calculateYearPercentage(`04.2024-08.2024`)
-    }
+        percent: calculateYearPercentage(`12.2023-05.2024`)
+    },
 ]

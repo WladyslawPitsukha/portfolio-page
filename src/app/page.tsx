@@ -1,5 +1,7 @@
 import AboutMeSect from "@/components/aboutMe";
 import ContactSect from "@/components/contact";
+import EducationSect from "@/components/education";
+import ExperienceSect from "@/components/experience";
 import HomeSect from "@/components/home";
 import Networks from "@/components/networks";
 import PortSect from "@/components/portyfolio";
@@ -13,6 +15,8 @@ export default function Home() {
       <AboutMeSect />
       <ServicesSect />
       <SkillsSect />
+      <ExperienceSect />
+      <EducationSect />
       <PortSect />
       <Networks />
       <ContactSect />
